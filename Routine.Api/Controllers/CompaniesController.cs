@@ -33,7 +33,7 @@ namespace Routine.Api.Controllers
             _propertyMappingService = propertyMappingService ?? throw new ArgumentNullException(nameof(propertyMappingService));
             _propertyCheckerService = propertyCheckerService ?? throw new ArgumentNullException(nameof(propertyCheckerService));
         }
-        [EnableCors("myAllowSpecificOrigins2","","GET")]
+        [EnableCors("myAllowSpecificOrigins2","","GET")] // 测试
         [HttpGet(Name = nameof(GetCompanies))]
         [HttpHead]
         //public async Task<IActionResult> GetCompanies()
