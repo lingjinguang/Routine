@@ -48,6 +48,13 @@ namespace Routine.Api
                     {
                         builder.WithOrigins("http://localhost:8080");
                     });
+                option.AddPolicy("myAllowSpecificOrigins2",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:8080")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
             });
             services.AddControllers(configure:setup=>
             {
@@ -110,7 +117,8 @@ namespace Routine.Api
 
             app.UseRouting();
 
-            app.UseCors("myAllowSpecificOrigins");
+            // app.UseCors("myAllowSpecificOrigins");  //命名策略
+            app.UseCors();  // 属性启用Cors
 
             app.UseAuthorization();
 
