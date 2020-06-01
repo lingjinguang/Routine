@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xiaoguang\\Desktop\\Routine\\Routine.Api\\Routine.Api.csproj": {}
+    "C:\\Asp.net core\\Routine\\Routine.Api\\Routine.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xiaoguang\\Desktop\\Routine\\Routine.Api\\Routine.Api.csproj": {
+    "C:\\Asp.net core\\Routine\\Routine.Api\\Routine.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xiaoguang\\Desktop\\Routine\\Routine.Api\\Routine.Api.csproj",
+        "projectUniqueName": "C:\\Asp.net core\\Routine\\Routine.Api\\Routine.Api.csproj",
         "projectName": "Routine.Api",
-        "projectPath": "C:\\Users\\xiaoguang\\Desktop\\Routine\\Routine.Api\\Routine.Api.csproj",
+        "projectPath": "C:\\Asp.net core\\Routine\\Routine.Api\\Routine.Api.csproj",
         "packagesPath": "C:\\Users\\xiaoguang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xiaoguang\\Desktop\\Routine\\Routine.Api\\obj\\",
+        "outputPath": "C:\\Asp.net core\\Routine\\Routine.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

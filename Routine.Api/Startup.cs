@@ -42,7 +42,7 @@ namespace Routine.Api
             });
             services.AddResponseCaching(); //添加缓存服务
             //configure: setup => setup.ReturnHttpNotAcceptable = true  值默认为false，开启后，当链接请求类型不被接受，返回406
-            services.AddCors(option => {
+            services.AddCors(option => {    // 添加跨域
                 option.AddPolicy("myAllowSpecificOrigins",
                     builder =>
                     {
