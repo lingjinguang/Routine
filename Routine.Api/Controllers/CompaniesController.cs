@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.Web.Http.Cors;
+//using System.Web.Http.Cors;
 using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
 using Routine.Api.DtoParameters;
@@ -33,7 +34,7 @@ namespace Routine.Api.Controllers
             _propertyMappingService = propertyMappingService ?? throw new ArgumentNullException(nameof(propertyMappingService));
             _propertyCheckerService = propertyCheckerService ?? throw new ArgumentNullException(nameof(propertyCheckerService));
         }
-        [EnableCors("myAllowSpecificOrigins2","","GET")] // 测试
+        [EnableCors("myAllowSpecificOrigins2")] // 测试
         [HttpGet(Name = nameof(GetCompanies))]
         [HttpHead]
         //public async Task<IActionResult> GetCompanies()

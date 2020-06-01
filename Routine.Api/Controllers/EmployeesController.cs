@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Marvin.Cache.Headers;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -35,6 +36,7 @@ namespace Routine.Api.Controllers
             _propertyCheckerServeice = propertyCheckerServeice ?? throw new ArgumentNullException(nameof(propertyCheckerServeice));
         }
 
+        [EnableCors("myAllowSpecificOrigins2")] // 测试
         [HttpGet(Name = nameof(GetEmployeesByCompany))]
         public async Task<ActionResult<IEnumerable<EmployeeDto>>> GetEmployeesByCompany(Guid companyId,[FromQuery] EmployeeDtoParameters parameters)
         {
