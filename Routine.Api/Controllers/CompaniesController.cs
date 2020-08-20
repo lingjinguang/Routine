@@ -17,7 +17,6 @@ using Routine.Api.Services;
 
 namespace Routine.Api.Controllers
 {
-    //[Route("api/[controller]")]
     [ApiController]
     [Route("api/companies")]
     public class CompaniesController : ControllerBase
