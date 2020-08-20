@@ -152,12 +152,27 @@ namespace Routine.Api.Controllers
 
             //return Ok(_mapper.Map<CompanyDto>(company).ShapeData(fields));//状态码200
         }
+        /// <summary>
+        ///  创建公司
+        /// </summary>
+        /// <param name="company">公司信息</param>
+        /// <returns></returns>
+        [EnableCors("myAllowSpecificOrigins2")]
         [HttpPost(Name = nameof(CreateCompany))]
         public async Task<ActionResult<CompanyDto>> CreateCompany(CompanyAddDto company)
         {
+            //Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:8080");
+            //Response.Headers.Add("Access-Control-Allow-Methods", "POST");
+            //Response.Headers.Add("Access-Control-Allow-Headers", "x-requested-with,content-type");
             var entity = _mapper.Map<Company>(company);
             _companyRepository.AddCompany(entity);
-            await _companyRepository.SaveAsync();
+            try
+            {
+                await _companyRepository.SaveAsync();
+            } catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
 
             var resutDto = _mapper.Map<CompanyDto>(entity);
             var links = CreateLinksForCompany(resutDto.Id,null);

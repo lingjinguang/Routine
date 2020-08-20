@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.EntityFrameworkCore;
 using Routine.Api.Data;
 using Routine.Api.DtoParameters;
 using Routine.Api.Entities;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace Routine.Api.Services
 {
+    [EnableCors("myAllowSpecificOrigins2")]
     public class CompanyRepository:ICompanyRepository
     {
         private readonly RoutineDbContext _context;

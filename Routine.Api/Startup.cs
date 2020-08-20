@@ -52,8 +52,11 @@ namespace Routine.Api
                     builder =>
                     {
                         builder.WithOrigins("http://localhost:8080")
+                        .AllowAnyOrigin()
                         .AllowAnyHeader()
                         .AllowAnyMethod();
+                        //.AllowAnyOrigin()
+                        //.AllowCredentials();
                     });
             });
             services.AddControllers(configure:setup=>
