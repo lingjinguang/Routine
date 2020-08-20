@@ -19,7 +19,7 @@ namespace Routine.Api.Controllers
 {
     //[Route("api/[controller]")]
     [ApiController]
-    [Route(template:"api/companies")]
+    [Route("api/companies")]
     public class CompaniesController : ControllerBase
     {
         private readonly ICompanyRepository _companyRepository;
